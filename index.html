@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleColorPicker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/SCP.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <script src="src/SCP.js" defer></script>
+</head>
+<body>
+    <nav id="nav">
+        <div class="filtr">
+           <div class="przycisk kolor1" onclick="SCPselect('#cb4b16')"></div>
+           <div class="przycisk kolor2" onclick="SCPselect('#0080c0')"></div>
+           <div class="przycisk kolor3" onclick="SCPselect('#006464')"></div>
+           <input type="color" id="scpChange">
+           <div id="scpReset" class="reset "><i class="icon-arrows-cw"></i></div>
+        </div>
+    </nav>
+    <header id="jumbotron">
+        <h1>
+           Simple Color Picker 
+        </h1>
+        <p>Light and simple</p>
+        <div class="gitLink">
+            <a href="https://github.com/L1su/SimpleColorPicker" target="_blank">Zobacz na GitHub</a>
+        </div>
+    </header>
+
+    <main id="main">
+        
+        <h2>Przykłady</h2>
+        <div class="przyklad przy1">Cienie tekstu</div>
+        <div class="przyklad przy2">Ramka boxu oraz cienie</div>
+        <div class="przyklad przy3"></div>
+        
+        <h3>Konfiguracja</h3>
+        <div class="opis">&#8226; Edycja koloru startowego</div>
+            <div class="kod">
+            <span>
+                :root { <br />
+                    &emsp;--ScpColor: <span class="kolor">#5b00b7</span>; <br />
+                }
+            </span>
+            </div>
+        <div class="zbior"><span class="plik">Plik: </span><a href="https://github.com/L1su/SimpleColorPicker/blob/master/src/SCP.css" class="link plik">src/SCP.css</a></div>
+        
+        <h4>Zgodność przeglądarek</h4>
+        <div class="opis">
+            <i class="icon-safari"></i>
+            <i class="icon-opera"></i>
+            <i class="icon-firefox"></i>
+            <i class="icon-chrome"></i>
+            <div>
+                Kod działa poprawnie z wszystkimi przeglądarkami obsługującymi <a href="https://caniuse.com/#feat=css-variables" target="_blank" class="link">zmienne w CSS</a>
+                <div>Strona oraz skrypt wykorzystuje lokalne pliki użytkownika</div>
+            </div>
+        </div>
+        
+        <h5>Licencja</h5>
+        <span class="opis icon-brush">Licencja typu:</span> <a class="link" href="https://opensource.org/licenses/MIT target="_blank">MIT</a>
+    </main>
+   <footer id="stopka">
+        <a href="https://github.com/L1su" class="icon-github-circled" target="_blank">GitHub</a>
+        <a href="https://opensource.org/licenses/MIT" class="icon-brush" target="_blank">Licencja</a>
+   </footer>
+</body>
+</html>
