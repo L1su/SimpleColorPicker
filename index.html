@@ -4,66 +4,122 @@
     <meta charset="UTF-8">
     <title>SimpleColorPicker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lekki i prosty Color Picker">
+    <meta name="theme-color" content="#0080c0">
     <link rel="icon" href="favicon.ico" type="image/png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="src/SCP.css">
-    <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <script src="src/SCP.js" defer></script>
 </head>
-<body>
-    <nav id="nav">
-        <div class="filtr">
-           <div class="przycisk kolor1" onclick="SCPselect('#cb4b16')"></div>
-           <div class="przycisk kolor2" onclick="SCPselect('#0080c0')"></div>
-           <div class="przycisk kolor3" onclick="SCPselect('#006464')"></div>
-           <input type="color" id="scpChange">
-           <div id="scpReset" class="reset "><i class="icon-arrows-cw"></i></div>
-        </div>
-    </nav>
-    <header id="jumbotron">
-        <h1>
-           Simple Color Picker 
-        </h1>
-        <p>Light and simple</p>
-        <div class="gitLink">
-            <a href="https://github.com/L1su/SimpleColorPicker" target="_blank">Zobacz na GitHub</a>
-        </div>
-    </header>
 
-    <main id="main">
-        
-        <h2>Przykłady</h2>
-        <div class="przyklad przy1">Cienie tekstu</div>
-        <div class="przyklad przy2">Ramka boxu oraz cienie</div>
-        <div class="przyklad przy3"></div>
-        
-        <h3>Konfiguracja</h3>
-        <div class="opis">&#8226; Edycja koloru startowego</div>
-            <div class="kod">
-                :root { <br />
-                    &emsp;--ScpColor: <span class="kolor">#5b00b7</span>; <br />
-                }
-            </div>
-        <div class="zbior"><span class="plik">Plik: </span><a href="https://github.com/L1su/SimpleColorPicker/blob/master/src/SCP.css" class="link plik">src/SCP.css</a></div>
-        
-        <h4>Zgodność przeglądarek</h4>
-        <div class="opis">
-            <i class="icon-safari"></i>
-            <i class="icon-opera"></i>
-            <i class="icon-firefox"></i>
-            <i class="icon-chrome"></i>
-            <div>
-                Kod działa poprawnie z wszystkimi przeglądarkami obsługującymi <a href="https://caniuse.com/#feat=css-variables" target="_blank" class="link">zmienne w CSS</a>
-                <div>Strona oraz skrypt wykorzystuje lokalne pliki użytkownika</div>
-            </div>
+<body>
+    <div class="menu">
+       <div class="menu__filtr">
+            <span class="menu__przycisk menu__przycisk--1 SPCchange" data-spc="#cb4b16"></span>
+            <span class="menu__przycisk menu__przycisk--2 SPCchange" data-spc="#5b00b7"></span>
+            <span class="menu__przycisk menu__przycisk--3 SPCchange" data-spc="#006464"></span>
+            <input type="color" class="menu__colorInput SPCpick">
+            <span class="menu__reset SPCreset">&#8635;</span>
         </div>
-        
-        <h5>Licencja</h5>
-        <span class="opis icon-brush">Licencja typu:</span> <a class="link" href="https://opensource.org/licenses/MIT target="_blank">MIT</a>
+    </div>
+    <header class="header">
+        <H1 class="header__title">Simple Color Picker <sup class="header__version">2</sup></H1>
+        <p class="header__motto">Simple and Light</p>
+        <a href="https://github.com/L1su/SimpleColorPicker"  target="_blank" class="header__button">Zobacz na GitHub</a>
+    </header>
+    <main class="main">
+        <article class="main__article"> 
+            <h2 class="main__title">Implementacja w HTML</h2>
+            <p class="main__description">
+                Przycisk wyboru koloru
+            </p>
+            <div class="main__example">
+                <input type="color" class="SPCpick">
+            </div>
+            <pre class="main__code">
+            <code>
+&lt;input type="color" class="SPCpick"&gt;
+            </code>
+            </pre>
+
+            <p class="main__description">
+                Przycisk resetu
+            </p>
+            <div  class="main__example">
+                <span class="SPCreset">↻</span>
+            </div>
+            <pre class="main__code">
+            <code>
+&lt;span class="SPCreset"&gt;Reset&lt;/span&gt;
+            </code>
+            </pre>
+
+            <p class="main__description">
+                Przycisk z zdefiniowanym kolorem
+            </p>
+            <div  class="main__example">
+                <span class="SPCchange" data-spc="#cb4b16">#cb4b16 &bull;</span>
+                <span class="SPCchange" data-spc="#5b00b7">#5b00b7 &bull;</span> 
+                <span class="SPCchange" data-spc="#006464">#006464 &bull;</span>
+            </div>
+            <pre class="main__code">
+            <code>
+&lt;span class="SPCchange" data-spc="#cb4b16"&gt;Kolor #cb4b16&lt;/span&gt;
+&lt;span class="SPCchange" data-spc="#0080c0"&gt;Kolor #0080c0&lt;/span&gt; 
+&lt;span class="SPCchange" data-spc="#006464"&gt;Kolor #006464&lt;/span&gt;
+            </code>
+            </pre>
+        </article>
+
+       
+        <article class="main__article">
+            <h2 class="main__title">Implementacja w CSS</h2>
+            <p class="main__description">
+                Edycja koloru początkowego:
+            </p>
+            <pre class="main__code">
+            <code>
+:root {
+    --ScpColor: #5b00b7; 
+}
+            </code>
+            </pre>
+
+            <p class="main__description">
+                Zmienna odpowiedzialna za kolor w CSS, przykład: 
+            </p>
+            <pre class="main__code">
+            <code>
+body{
+    background: var(--ScpColor);
+}
+            </code>
+            </pre>
+        </article>
+
+
+        <article class="main__article">
+            <h2 class="main__title">Zgodność z przegadarkami</h2>
+            <p class="main__description">
+                Skrypt działa na wszystkich wiodących przegladarkach.
+                <a href="https://caniuse.com/#feat=css-variables" target="_blank">Sprawdź sam</a>.
+            </p>
+        </article>
     </main>
-   <footer id="stopka">
-        <a href="https://github.com/L1su" class="icon-github-circled" target="_blank">GitHub</a>
-        <a href="https://opensource.org/licenses/MIT" class="icon-brush" target="_blank">Licencja</a>
-   </footer>
+
+
+    <footer class="footer">
+        <span class="footer__text footer__text--EuInfo">
+            Ta strona wykorzystuje pliki lokalne
+        </span>
+
+        <span class="footer__text footer__text--github">
+            <a href="https://github.com/L1su" target="_blank">GitHub</a>
+        </span>
+
+        <span class="footer__text footer__text--licen">
+            Projekt jest udostępniany na licencji <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>
+        </span>
+    </footer>
 </body>
 </html>

@@ -1,47 +1,50 @@
 :root {
-    --ScpColor: #5b00b7;     /** Default color **/
+    --ScpColor: #0080c0;     /** Default color **/
 }
 
 
-#scpChange{
+.SPCpick{
     width: 25px;
     height: 25px;
     border-radius: 50px;
-    border: 2px solid white;;
-    background: var(--ScpColor);
+    border: 2px solid white;
     padding: 0;
-    -webkit-appearance: none; 
+    margin: 2px;
+    background: var(--ScpColor);
+    -webkit-box-shadow:inset 0px 0px 0px 10px #f00;
+    box-shadow:inset 0px 0px 0px 1px black;
     cursor: pointer;
+    -webkit-appearance: none; 
 }
 
-#scpChange:hover{
+.SPCpick:hover{
     -webkit-transition-duration: 0.6s;
     transition-duration: 0.6s;
     border-color: #C0C0C0;
 }
 
-#scpChange::-webkit-color-swatch-wrapper{
+.SPCpick::-webkit-color-swatch-wrapper{
     display: none; 
 }
-#scpChange::-moz-color-swatch-wrapper{
+.SPCpick::-moz-color-swatch-wrapper{
     display: none; 
 }
-#scpChange::-ms-color-swatch-wrapper {
+.SPCpick::-ms-color-swatch-wrapper {
     display: none; 
 } 
 
 
-#scpChange::-webkit-color-swatch{
+.SPCpick::-webkit-color-swatch{
     display: none;
 }
-#scpChange::-moz-color-swatch{
+.SPCpick::-moz-color-swatch{
     display: none;
 }
-#scpChange::-ms-color-swatch {
+.SPCpick::-ms-color-swatch {
     display: none;
 }
 
 
-#scpChange:focus {
+.SPCpick:focus {
     outline: none;
 }
