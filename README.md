@@ -2,9 +2,9 @@
 
 ## :memo: Informacje:
  Skrypt umożliwa użytkownikowi naszej strony dostosowanie kolorystki strony w prosty sposób.
- Skrpt nie obciąża twojej strony, pliki wymagane do poprawnego działania zajmuja 1,77KB (SCP.mini.js + SCP.css)
- [Zgodność z przegladarkami](https://caniuse.com/#feat=css-variables)
- [Licencja MIT](https://opensource.org/licenses/MIT)
+ Skrpt nie obciąża twojej strony, pliki wymagane do poprawnego działania zajmuja 1,77KB (SCP.mini.js + SCP.css)  
+ [Zgodność z przegladarkami](https://caniuse.com/#feat=css-variables)  
+ [Licencja MIT](https://opensource.org/licenses/MIT)  
 
 ## :dart: Cele projektu:
  - Praca nad JS
